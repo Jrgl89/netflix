@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "./components/header";
 import { getAllMovies } from "@/services/movieService";
+import Footer from "./components/footer";
 
 interface MovieType {
   id: number;
@@ -27,10 +28,8 @@ export default async function Home() {
             backgroundImage: `url(${IMAGE_BASE_URL}${featuredMovies.backdrop_path})`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-top from black to to-transparent p-8 flex flex-col justify-end">
-            <h1 className="text-4xl font-bold mb-4">
-              {featuredMovies.title}
-            </h1>
+          <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent p-8 flex flex-col justify-end">
+            <h1 className="text-4xl font-bold mb-4">{featuredMovies.title}</h1>
             <p className="text-md max-w-xl">{featuredMovies.overview}</p>
             <div className="mt-4">
               <Link href={`/movie/${featuredMovies.id}`}>
@@ -42,6 +41,25 @@ export default async function Home() {
           </div>
         </div>
       )}
+
+      <div className="p-8">
+        <h2 className="text-3px font-bold mb-6">Үзэлт ихтэй кино</h2>
+        <div className="flex overflow-x-auto space-x-8 w-full">
+          {movies.results.map((movie: MovieType) => (
+            <Link key={movie.id} href={`/movie/${movie.id}`}>
+              <div className="flex-shrink-0 cursor-pointer transform hover:scale-105 transition duration-300 w-44">
+                <img
+                  src={`${IMAGE_BASE_URL}${movie.poster_path}`}
+                  alt={movie.title}
+                  className="w-full h-auto rounded-lg w-full h-80 object-cover"
+                />
+                <h3 className="text-lg font-semibold mt-2 ">{movie.title}</h3>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

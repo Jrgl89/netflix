@@ -5,7 +5,7 @@ function header() {
   return (
     <header className="flex justify-between items-center p-6 bg-black fixed w-full top-0 z-10">
       <a href="/">
-        <img src="logo.png" className="w-36" />
+        <img src="/logo.png" className="w-36" />
       </a>
       <nav>
         <ul className="flex space-x-6">
