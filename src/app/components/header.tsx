@@ -15,7 +15,7 @@ function header() {
             </Link>
           </li>
           <li>
-            <Link href="/" className="hover:text-gray-600">
+            <Link href="/movieList" className="hover:text-gray-600">
               Кино сан
             </Link>
           </li>

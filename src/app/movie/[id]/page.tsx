@@ -80,11 +80,24 @@ function page({ params }: { params: Promise<{ id: string }> }) {
             </button>
           </div>
         </div>
-          )}
-          <div className="p-8">
-              <p className="w-2/3 text-justify opacity-65">
-              The original Snow White and the Seven Dwarfs made Disney what it is today, and just like any revered movie, fans want to protect it. As with most remakes - especially Disney's live-action updates of animated classics - the Snow White trailer ruffled the feathers of uncharitable viewers who always appear when someone attempts something new, but let's not let that noise drown out the voices of fans who deserve to see West Side Story star Rachel Zegler portray the Disney Princess. Gal Gadot plays the Evil Queen, Marc Webb (500 Days of Summer and the first two Andrew Garfield Spider-Man movies) directs, and early critics in wicked stepmom mode also have much to say about the visual effects seen in the trailers. May this contemporary take on the story and Zegler's performance turn the movie's detractors into adorable, fluffy forest animals.</p>
-          </div>
+      )}
+      <div className="p-8">
+        <p className="w-2/3 text-justify opacity-65">
+          The original Snow White and the Seven Dwarfs made Disney what it is
+          today, and just like any revered movie, fans want to protect it. As
+          with most remakes - especially Disney's live-action updates of
+          animated classics - the Snow White trailer ruffled the feathers of
+          uncharitable viewers who always appear when someone attempts something
+          new, but let's not let that noise drown out the voices of fans who
+          deserve to see West Side Story star Rachel Zegler portray the Disney
+          Princess. Gal Gadot plays the Evil Queen, Marc Webb (500 Days of
+          Summer and the first two Andrew Garfield Spider-Man movies) directs,
+          and early critics in wicked stepmom mode also have much to say about
+          the visual effects seen in the trailers. May this contemporary take on
+          the story and Zegler's performance turn the movie's detractors into
+          adorable, fluffy forest animals.
+        </p>
+      </div>
       <Footer />
     </div>
   );
