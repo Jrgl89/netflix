@@ -51,7 +51,7 @@ export default async function Home() {
                 <img
                   src={`${IMAGE_BASE_URL}${movie.poster_path}`}
                   alt={movie.title}
-                  className="w-full h-auto rounded-lg w-full h-80 object-cover"
+                  className="w-full rounded-lg h-auto object-cover"
                 />
                 <h3 className="text-lg font-semibold mt-2 ">{movie.title}</h3>
               </div>
